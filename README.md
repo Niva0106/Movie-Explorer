@@ -58,7 +58,7 @@ To run the project locally:
 
 ## 🌐 Live Demo
 
-[View Movie Explorer]((https://movie-explorer-liard-five.vercel.app/))
+[View Movie Explorer](https://movie-explorer-liard-five.vercel.app/).
 
 ## 📸 Preview
 
