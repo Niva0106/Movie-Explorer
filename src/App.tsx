@@ -6,6 +6,11 @@ import "./App.css";
 
 function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div>
@@ -15,8 +20,15 @@ function App() {
       </header>
 
       <main>
+        <input
+          type="text"
+          placeholder="Search movies..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+
         <MovieGrid
-          movies={movies}
+          movies={filteredMovies}
           onMovieClick={setSelectedMovie}
         />
 
