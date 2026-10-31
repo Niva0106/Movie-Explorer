@@ -110,3 +110,49 @@ main {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.movie-details {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+  padding: 25px;
+  background: #222;
+  border-radius: 10px;
+}
+
+.movie-details img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.movie-details h2 {
+  margin-bottom: 15px;
+}
+
+.movie-details p {
+  margin: 12px 0;
+  color: #ccc;
+}
+
+.movie-details button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #e50914;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .movie-details {
+    flex-direction: column;
+  }
+
+  .movie-details img {
+    width: 100%;
+    height: 300px;
+  }
+}

@@ -22,15 +22,22 @@ function App() {
 
         {selectedMovie && (
           <div className="movie-details">
-            <h2>{selectedMovie.title}</h2>
-            <p>{selectedMovie.description}</p>
-            <p>Genre: {selectedMovie.genre}</p>
-            <p>Year: {selectedMovie.year}</p>
-            <p>⭐ {selectedMovie.rating}</p>
+            <img
+              src={selectedMovie.poster}
+              alt={selectedMovie.title}
+            />
 
-            <button onClick={() => setSelectedMovie(null)}>
-              Close
-            </button>
+            <div>
+              <h2>{selectedMovie.title}</h2>
+              <p>{selectedMovie.description}</p>
+              <p>Genre: {selectedMovie.genre}</p>
+              <p>Release Year: {selectedMovie.year}</p>
+              <p>⭐ {selectedMovie.rating}</p>
+
+              <button onClick={() => setSelectedMovie(null)}>
+                Close
+              </button>
+            </div>
           </div>
         )}
       </main>
