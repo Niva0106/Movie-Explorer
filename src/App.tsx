@@ -7,10 +7,18 @@ import "./App.css";
 function App() {
   const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState("All");
 
-  const filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredMovies = movies.filter((movie) => {
+    const matchesSearch = movie.title
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+
+    const matchesGenre =
+      selectedGenre === "All" || movie.genre === selectedGenre;
+
+    return matchesSearch && matchesGenre;
+  });
 
   return (
     <div>
@@ -26,6 +34,16 @@ function App() {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+
+        <select
+          value={selectedGenre}
+          onChange={(e) => setSelectedGenre(e.target.value)}
+        >
+          <option value="All">All Genres</option>
+          <option value="Sci-Fi">Sci-Fi</option>
+          <option value="Action">Action</option>
+          <option value="Romance">Romance</option>
+        </select>
 
         <MovieGrid
           movies={filteredMovies}
