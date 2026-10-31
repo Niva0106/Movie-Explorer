@@ -36,7 +36,37 @@ const movies: Movie[] = [
     year: 2016,
     poster: "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
     description: "A musician and an aspiring actress fall in love while pursuing their dreams in Los Angeles."
+  },
+  {
+    id: 5,
+    title: "Parasite",
+    genre: "Thriller",
+    rating: 8.5,
+    year: 2019,
+    poster: "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    description: "A poor family slowly becomes involved in the lives of a wealthy household."
+  },
+  {
+    id: 6,
+    title: "Your Name",
+    genre: "Romance",
+    rating: 8.4,
+    year: 2016,
+    poster: "https://image.tmdb.org/t/p/w500/q719jXXEzOoYaps6babgKnONONX.jpg",
+    description: "Two teenagers mysteriously begin switching bodies and develop an unexpected connection."
+  },
+  {
+    id: 7,
+    title: "Avengers: Endgame",
+    genre: "Action",
+    rating: 8.4,
+    year: 2019,
+    poster: "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    description: "The Avengers reunite for one final mission to restore the universe."
   }
+
 ];
+
+
 
 export default movies;
