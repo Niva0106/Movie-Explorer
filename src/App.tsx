@@ -1,5 +1,6 @@
 import MovieGrid from "./components/MovieGrid";
 import movies from "./movies";
+import "./App.css";
 
 function App() {
   return (
