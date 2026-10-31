@@ -175,3 +175,10 @@ input {
 select {
   cursor: pointer;
 }
+
+.empty-message {
+  color: #aaa;
+  text-align: center;
+  padding: 30px;
+  grid-column: 1 / -1;
+}

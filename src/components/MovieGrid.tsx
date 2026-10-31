@@ -9,13 +9,17 @@ interface MovieGridProps {
 function MovieGrid({ movies, onMovieClick }: MovieGridProps) {
   return (
     <div className="movie-grid">
-      {movies.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          movie={movie}
-          onClick={onMovieClick}
-        />
-      ))}
+      {movies.length > 0 ? (
+        movies.map((movie) => (
+          <MovieCard
+            key={movie.id}
+            movie={movie}
+            onClick={onMovieClick}
+          />
+        ))
+      ) : (
+        <p className="empty-message">No movies found.</p>
+      )}
     </div>
   );
 }
