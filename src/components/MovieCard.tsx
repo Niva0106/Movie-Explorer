@@ -1,12 +1,13 @@
-import type { Movie } from "../types.ts";
+import type { Movie } from "../types";
 
 interface MovieCardProps {
   movie: Movie;
+  onClick: (movie: Movie) => void;
 }
 
-function MovieCard({ movie }: MovieCardProps) {
+function MovieCard({ movie, onClick }: MovieCardProps) {
   return (
-    <div className="movie-card">
+    <div className="movie-card" onClick={() => onClick(movie)}>
       <img src={movie.poster} alt={movie.title} />
 
       <h3>{movie.title}</h3>
