@@ -1,75 +1,75 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🎬 Movie Explorer
 
-Currently, two official plugins are available:
+A simple and interactive Movie Explorer built using **React, TypeScript, and CSS** as part of the **μLearn Learning Fest 2026 – Web Development Challenge 7**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Explore a collection of movies, view their details, search by title, and filter movies by genre.
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Movie Cards:** Displays movies with posters, titles, genres, release years, and ratings.
+- **Movie Details:** Click on a movie to view its description and additional information.
+- **Search:** Find movies by their title.
+- **Genre Filtering:** Filter movies by genre.
+- **Empty State:** Displays a message when no movies match the search or filter.
+- **Responsive Design:** Adapts to different screen sizes.
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- Vite
+- CSS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+    src/
+    ├── components/
+    │   ├── MovieCard.tsx
+    │   └── MovieGrid.tsx
+    ├── App.tsx
+    ├── App.css
+    ├── index.css
+    ├── movies.ts
+    ├── types.ts
+    └── main.tsx
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
 
-```
+To run the project locally:
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+       git clone YOUR_GITHUB_REPOSITORY_URL
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Navigate to the project folder:
 
-```
+       cd "Movie Explorer"
+
+3. Install dependencies:
+
+       npm install
+
+4. Start the development server:
+
+       npm run dev
+
+5. Open the local URL displayed in your terminal.
+
+## 🌐 Live Demo
+
+[View Movie Explorer]([YOUR_DEPLOYED_WEBSITE_URL](https://movie-explorer-liard-five.vercel.app/))
+
+## 📸 Preview
+
+Add screenshots of your project here.
+
+## 🎓 Challenge Details
+
+- **Event:** μLearn Learning Fest 2026
+- **Challenge:** Movie Explorer – Components & Props
+- **Challenge ID:** LF 2026 Web Development Challenge 7
+
+---
+
+Built with ❤️ using React and TypeScript.
