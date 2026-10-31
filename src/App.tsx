@@ -64,9 +64,15 @@ function App() {
               <p>Release Year: {selectedMovie.year}</p>
               <p>⭐ {selectedMovie.rating}</p>
 
-              <button onClick={() => setSelectedMovie(null)}>
-                Close
-              </button>
+              <div className="details-buttons">
+                <button onClick={() => setSelectedMovie(null)}>
+                  Close
+                </button>
+
+                <button onClick={() => setSelectedMovie(null)}>
+                  Back to Movies
+                </button>
+              </div>
             </div>
           </div>
         )}
